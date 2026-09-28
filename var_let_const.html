@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Global scope
+        var a ="Hii Its sonal";
+        var a ="Hii Its sakshi";// redeclare allw
+        a="Hi its sanika";// re-assign allowed
+        console.log(a);
+
+        let b = "Hello sunil";
+       // let b="welcome karan"; //redecare not allowed
+        b="Welcome Amina"; // reassign allowed
+        console.log(b);
+      
+      //  const c ="Hii Its sonal";
+      //  const c ="Hii Its sakshi";// redeclare allw
+        c="Hi its sanika";// re-assign allowed
+        console.log(a);
+
+
+    </script>
+    <script>
+        function example(){
+            var p =1;  //Global scope
+            let q =2;  //block scope
+            const r =3; //block scope
+        
+        if (true)
+        {//inside this block
+            var p=10;
+            let q=20;
+            const r=30;
+            //inside the block
+            document.write("-----Inside block scope----");
+            document.write("p =" + p + "<br>");//10
+            document.write("q =" + q + "<br>");//20
+            document.write("r =" + r + "<br>");//30
+        }
+
+        //outside the block
+        document.write("-----Outside block scope----");
+        document.write("p =" + p + "<br>");//10 (it was overwritten by inner var x )
+        document.write("q =" + q + "<br>");//2
+        document.write("r =" + r + "<br>");//3
+    }
+  //call function
+    example();  
+
+    </script>
+    
+</body>
+</html>
