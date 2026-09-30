@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sumRest(name,course, address, ...marks){
+            document.write(`Hello ${name}<br>`);
+
+            let sum =0;
+            for (let i in marks){
+                sum +=marks[i];
+                        }
+        document.write("Total Marks: " + sum + "<br>");
+        }
+        sumRest("Sonal", "Computer Science", "Pune", 90, 80, 70, 60, 50);
+        sumRest("sakshi", "IT", "Kolhapur", 90, 80, 70, 60, 50, 40, 30, 20);
+
+    </script>
+    
+    <script>
+        function studentInfo(name, address, ...subjects){
+        document.write(`Student name : ${name} <br>`);
+        document.write(`Address : ${address} <br>`);
+        document.write(`Subjects : ${subjects} <br>`);
+    }
+    studentInfo("Sonal", "Pune", "Maths", "Science", "English");
+    studentInfo("Sakshi", "Kolhapur", "Maths", "Science", "English", "Hindi", "Marathi");
+    </script>
+
+    <script>
+        function showSum(name, ... numbers)
+{
+    let total=0;
+    for (let num of numbers){
+        total += num;
+    }
+    console.log(`hello , ${name}`);
+    console.log(`You Emtered ${numbers.length} numbers : ${numbers.join(", ")}`);
+    console.log(`Total : ${total}`);
+
+}  
+ showSum("Sonal", 10, 20, 30, 40, 50); 
+ showSum("Sakshi", 10, 20, 30, 40, 50, 60, 70, 80, 90);
+ //Rest operator Allows a function to accept any number of arguments and collect then in to array. 
+ 
+ </script>
+
+</body>
+</html>
