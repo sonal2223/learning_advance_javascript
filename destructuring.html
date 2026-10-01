@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person ={
+            name: "Sonal",
+            age: 22,
+            gender: "Female"
+        };
+        document.write("name: " + person.name + "<br>");
+        document.write("age: " + person.age + "<br>");
+        document.write("gender: " + person.gender + "<br>");
+    
+
+    let name1 = person.name;
+    let age1= person.age;
+    let gender1 = person.gender;
+
+    console.log(name1);
+    console.log(age1);
+    console.log(gender1);
+
+    </script>
+
+    <script>
+        //object Destructuring
+        const person1 ={
+            name: "Sonal",
+            age: 22,
+            gender: "Female"
+        };
+        const {name, age, gender} = person1;
+        console.log(name);
+        console.log(age);
+        console.log(gender);
+        document.write("Name:" + name + "Age:"+ age + "Gender:" + gender);
+    </script>
+
+    <script>
+        function showInfo({name, age, gender}){
+            document.write(`Name: ${name}, Age: ${age}. Gender: ${gender}`);
+        }
+        showInfo(person1);
+    </script>
+
+    <script>
+        const Student ={
+            uname: "Sonal",
+            marks:{math:90, science: 87},
+        };
+        const{
+            uname,
+            marks:{maths, science},
+        } = Student;
+
+        document.write(`<br> Username: ${uname}, Maths: ${maths}, Science: ${science}`);
+        
+    </script>
+
+    <script>
+        const arrValue =["one","two", "three"];
+        const[x, y, z]= arrValue;
+        console.log(x);
+        console.log(y);
+        console.log(z);
+    </script>
+
+
+<script>
+    //Swap Variable easily
+    let a=5, b=10;
+    [a,b] = [b,a];
+    document.write(`<br> a: ${a}, b: ${b}`);
+</script>
+
+<script>
+    const numbers =[10,20, 30,40,50,60,70];
+    const [first, second, ...rest] =numbers;
+    document.write(`<br> first: ${first}, second: ${second}, rest: ${rest}`);
+</script>
+</body>
+</html>
