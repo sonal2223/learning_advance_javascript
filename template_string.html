@@ -12,8 +12,32 @@
         var phone ="8262924381";
         document.write("My name is " + name + "I am from " + address +  "Contact me on" + phone + "<br>",);
         document.write( `My name is ${name} I am from ${address} Contact me on ${phone}`); //template string
+        //document.write(` `); - backtick is used for template string
+        //${name} - (variable interpolation) used to access variable in template string
+        //I am from ${address} - template literal interpolation
+        //"${name}" - string interpolation
+        //Template string literal
+        
+        //defination
+       // Template literals are string written using backtics (` `) that allow us to easily insert variables or rxpression using ${}.
+
+    </script>
 
 
+    <script>
+           var fname ="sonal";
+           var lname ="kumbhar";
+           function fullname(fname, lname){
+            return `${fname} ${lname}`;
+           }
+
+           let flname = `Hello ${fullname(fname, lname)}`;
+           document.write("<br>");
+           document.write(fullname(fname, lname));
+           document.write("<br>");
+           document.write(fname);
+           console.log(fname);
+           
 
     </script>
 </body>
