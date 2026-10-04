@@ -7,6 +7,29 @@
 </head>
 <body>
     <script>
+        function sum(num1, num2){
+            document.write(num1 + num2, "<br>");
+        }
+        sum(10,20);
+        sum(10,20,30);
+
+    </script>
+
+    <script>
+       function add(...numbers){
+        let sum=0;
+        for (let i in numbers){
+            sum +=numbers[i];
+
+        }
+        document.write(sum + "<br>");
+       }
+           add(12, 56, 67, 68);
+           add(12,56, 67, 68, 90, 100, 200);
+           add(12,56);
+    </script>
+
+    <script>
         function sumRest(name,course, address, ...marks){
             document.write(`Hello ${name}<br>`);
 
