@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //parent class
+        class person{
+            constructor(name, age){
+                this.name =name;
+                this.age = age;
+            }
+        showInfo(){
+            document.write(`<h1> Person Info: </h1> - Name: ${this.name} <br> Age: ${this.age}<br>`);
+
+        }
+    }
+//child class
+class student extends person{
+    constructor(name, age,rollNo){
+        super(name, age);
+        this.rollNo
+    }
+    showStudent(){
+         document.write(`<h1> Student Info: </h1> - Name: ${this.name} <br> Age: ${this.age}<br>, RollNo: ${this.rollNo}`);
+    }
+}
+    
+    </script>
+
+    <script>
+        class employee{
+            constructor(salary, emp_id){
+                this.salary= salary;
+                this.emp_id=emp_id;
+            }
+            showInfo(){
+                document.write(`<h1> Employee Info: </h1> - Salary: ${this.salary}, Emp_id: ${this.emp_id}`);
+    }
+        }
+
+        class employee extends person{
+   constructor(salary, emp_id, emp_name){
+        super(salary, emp_id);
+        this.emp_name;
+
+    }
+    showEmployee(){
+         document.write(`<h1> Employee Info: </h1> - Salary: ${this.salary}, Emp_id: ${this.emp_id}, Emp_name: ${this.emp_name}`);
+    }
+            }
+  
+    </script>
+</body>
+</html>
