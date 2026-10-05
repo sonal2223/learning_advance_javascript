@@ -40,6 +40,59 @@
         //module 
         //promise
     </script>
+    <script>
+        class stud {
+            constructor(){
+                document.write("hello its sonal" + "<br>");
+            }
+        }
+        let s2 =new stud();
+    </script>
+
+<script>
+    //a constructor is a special method of a class for creating and initializing an object created with that class. It is called automatically when a new object is created.
+    class person {
+        constructor(name, age){//constructor method
+            this.name = name;// assign value to the objectf propery
+            this.age = age;// refer to the current object being created
+            this.display();// methods called inside constructor
+        }
+        display(){
+            document.write(`Name : ${this.name} , Age : ${this.age}<br>`);
+        
+        }
+    }
+    const s3 = new person ("Sonal", 22);
+    const s4 = new person ("John", 25);
+   // s3.display();
+   // s4.display();
+
+   
+</script>
+
+<script>
+    class student101 {
+        //constructor method 
+        constructor (name, course){
+            this.name = name;
+            this.course= course;
+
+        }
+        display() {
+           console.log(`Name : ${this.name}, Course : ${this.course}`);
+        }
+        static collegeName() {
+            console.log("PCCOE")
+        }
+    }
+    let student_s = new student101("sonal", "IT");
+    student_s.display();
+    student101.collegeName(); //static methods using classname - classname.static method name
+    //static methods belongs only to the class.
+
+   
+     
+</script>
     
 </body>
 </html>
