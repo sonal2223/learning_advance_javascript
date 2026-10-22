@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Clouser</title>
+    
 </head>
 <body>
-    <script>
+    <!-- <script>
         function outer(){
             let x= 10;
 
@@ -17,6 +18,54 @@
         }
         let f= outer();
         f();
+    </script> -->
+
+    <!-- <script>
+        function outer(){
+            let count =1;
+
+        function inner(){
+            count++;
+        console.log(count);
+        }    
+        return inner;
+        }
+        let counter= outer();
+        counter();
+        counter();
+        counter();
+    </script> -->
+
+    <!-- <script>
+        function cart(){
+            let items=0;
+
+        return function(){
+            items++;
+        console.log("Items in cart", items);
+        };
+        }
+
+        let addItem= cart();
+        addItem();
+        addItem();
+        addItem();
+
+    </script> -->
+
+    <script>
+     function bankbalance(){
+        let balance=1000;
+
+         return function deposite(amount){
+            balance=balance+amount;
+            console.log("current balance:" + balance);
+         };
+     }
+     let myAccount = bankbalance();
+     myAccount(500);
+     myAccount(1500);
+    myAccount(1000);
     </script>
 </body>
 </html>
