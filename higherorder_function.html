@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.map- The map() method executes a callback function for every array elemenmt and return a new array with new value
+        let numbers =[10,20,30,40];
+        let result= numbers.map(function(num){
+            return num * 2
+        });
+        console.log(result);
+
+    </script>
+    <script>
+        //conver names to uppercase
+        let names=["sonal","samruddhi", "neha"];
+        let result1=names.map((name) => name.toUpperCase());
+        console.log(result1);
+    </script>
+    <script>
+        let prices = [100, 200, 300];
+        let finalPrice=prices.map((price)=> price * 1.18);     
+        console.log(finalPrice);
+    </script>
+
+    <script>
+        let students=[
+            {names:"sonal", marks:90},
+            {names:"sanika", marks:97},
+            {names:"kanishka", marks:95},
+            {names:"sakshi", marks:93},
+            {names:"sami", marks:65},
+        ];
+        let names1 = students.map(student => student.names);
+        console.log(names1);
+    
+    </script>
+    <script>
+        let numbers2=[10,21,33,40,50,55];
+        let result3=numbers2.filter((num) => num % 2==0);
+        console.log(result3);
+    </script>
+    <script>
+        let marks=[35,80,25,77,89,21];
+        let pass=marks.filter((mark) => mark>=75);
+        console.log(pass);
+    </script>
+    <script>
+        let price2=[500,300,1000,800,150,1200,1400,900];
+        let result4=price2.filter((price) => price<1000);
+        console.log(result4);
+    </script>
+    <script>
+        let employees=[
+            {names:"sonal", active:true},
+             {names:"sonal", active:false},
+              {names:"sonal", active:true},
+               {names:"sonal", active:false},
+                {names:"sonal", active:true},
+            
+        ];
+        let result5= employees.filter((emp)=> emp.active);
+        console.log(result5);
+    </script>
+    <script>
+        //3.foreach()- perform an action for every element
+        //definamtion- the forEach() methods executes callback functions for each elements of an array, but it is does not return a new array
+        let name2=["sonal","samruddhi","pratik","karan"] ;
+        name2.forEach(function(name){
+        console.log(name);
+    });
+        
+    </script>
+
+    <script>
+    let numbers6 =[2,3,4,5];
+    numbers6.forEach((num)=> {
+        console.log("Number is", num);
+        console.log("Square is", num * num);
+    });
+    </script>
+    <script>
+        //4.reduce()-convert an array into a single result
+        //define- the reduce() method is processes array elements and accumlates them into a sinle result, such as a number, string, object or another array
+        //syntax
+        //array.reduce((accumulator, currentvalue)=>
+       //return updated accumulator
+       //}, initialvalue);
+       //accumulator: store the accumulator result
+       //currentvalue: the current array elemenbt
+       //initial value: the starting value of accumilator
+        let number7 =[10,20,30,40];
+        let total = number7.reduce((sum, num)=>{
+            return sum + num; 
+        },0);
+    </script>
+    <script>
+        let numbers8=[25,67,78,23,67];
+        let maxnumber= numbers8.reduce((max, num)=>{
+            return num>max ? num : max;
+        }, numbers8[0]);
+        console.log(maxnumber);
+    </script>
+    <script>
+        //5.find() returns the first element that satisfies the given condition 
+        let numbers9=[10,20,30,40,60];
+        let result9=numbers9.find(function (num){
+            return num>80;
+        });
+        console.log(result9);
+    </script>
+</body>
+</html>
+//loops,bom
