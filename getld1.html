@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Live Character Counter</h2>
+    <textarea
+    id="message"
+    oninput="countCharacters()"
+    rows="5"
+    cols="30"
+    ></textarea>
+    <h3 id="characterCount">Characters : 0</h3>
+
+    <script>
+        function countCharacters(){
+          //Get textarea element
+          let text = document.getElementById("message");
+          
+          let count= text.value.length;
+
+          //Display character count
+          document.getElementById("result").innerText ="Character :" + count;
+        }
+    </script>
+    
+</body>
+</html>
