@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="highlight">Change color of All headings using Class selector</h1>
+
+    <h2 class="heading">HTML - to create websites Structure</h2>
+    <h2 class="heading">CSS - to style the websites</h2>
+    <h2 class="heading">Js - Events and Functionality on website</h2>
+
+    <button onclick="changeColor()"> change color</button>
+    <p class="headings">
+        lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+
+    <script>
+        function changeColor(){
+            let headings= document.getElementsByClassName("heading");
+            for(let i=0; i< headings.length; i++){
+                headings[i].style.color ="blue";
+            }
+        }
+    </script>
+
+    <script>
+    function changeColor() {
+        let headings = document.getElementsByClassName("heading");
+
+        for (let i = 0; i < headings.length; i++) {
+            headings[i].style.backgroundColor = "yellow";
+        }
+    }
+
+</script>
+<script>
+    function changeColor() {
+        let headings = document.getElementsByTagName("h2");
+
+        for (let i = 0; i < headings.length; i++) {
+            headings[i].style.backgroundColor = "yellow";
+             headings[i].style.backgroundColor = "yellow";
+        }
+    }
+    </script>
+</body>
+</html>
